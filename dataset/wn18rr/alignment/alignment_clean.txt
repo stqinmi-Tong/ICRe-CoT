@@ -1,0 +1,13 @@
+{
+ "_member_of_domain_usage": "[T] can be a term or word that belongs to the category or domain of the word [H]'s usage",
+ "_has_part": "[T] can be a component or a constituent of the word [H]",
+ "_also_see": "[T] can be a synonym of the word [H]",
+ "_hypernym": "[T] can be a broader category of the word [H]",
+ "_synset_domain_topic_of": "[T] can be a topic or subject area related to the word [H]",
+ "_derivationally_related_form": "[T] can be a word derivated from the word [H]",
+ "_similar_to": "[T] shares a common characteristic or trait with the word [H]",
+ "_instance_hypernym": "[T] can be a broader category of the word [H]",
+ "_verb_group": "[T] can be a verb that is commonly used with thr word [H]",
+ "_member_meronym": "[T] can be a part or a member of the word [H]",
+ "_member_of_domain_region": "[T] can be located in or associated with the word [H]"
+}
