@@ -613,7 +613,7 @@ def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('--dataset', default="fb15k-237")
     parser.add_argument('--candidate_num', default=50, type=int)
-    parser.add_argument('--output_path', default="./outputs/fb15k-237/output_tail.txt")#fb15k-237
+    parser.add_argument('--output_path', default="./outputs/fb15k-237/output_tail.txt")
     parser.add_argument('--chat_log_path', default="./outputs/fb15k-237/chat_tail.txt")
     parser.add_argument('--query', default="tail")
     parser.add_argument('--model_path', default=None)
@@ -629,19 +629,17 @@ def parse_args():
     parser.add_argument('--overwrite', action="store_true")
     parser.add_argument('--device', default=0, help='the gpu device')
 
-    parser.add_argument('--api_key', default="sk-JMU1FWOBnZra7gVz1DRV8MlmNT7yCVr4VRB4PP539c5qRS80", type=str)
+    parser.add_argument('--api_key', default="Your API", type=str)
     parser.add_argument('--demon_per_step', default=10)
     parser.add_argument('--eff_demon_step', default=10)
     parser.add_argument('--max_demon_step', default=10)
     parser.add_argument('--max_llm_input_tokens', default=5000, type=int)
     parser.add_argument('--num_process', default=1, type=int, help='the number of multi-process')
 
-    parser.add_argument('--supporting_file_path', default="/root/autodl-tmp/dataset/fb15k-237/description/supporting_file.txt")
+    parser.add_argument('--supporting_file_path', default="supporting_file.txt")
     parser.add_argument('--chunk_size', default=500)
     parser.add_argument('--chunk_overlap', default=100)
     parser.add_argument('--k', default=1)
-    parser.add_argument("--entity_file", default="/root/autodl-tmp/dataset/fb15k-237/entity2text.txt")
-    parser.add_argument("--filter_file", default="/root/autodl-tmp/dataset/fb15k-237/filter_head.txt")
 
     args = parser.parse_args()
     args.output_path = './outputs/' + args.dataset + '/output_' + args.query + '_rat-context.txt'
@@ -712,6 +710,7 @@ if __name__ == '__main__':
         p.join()
         merge_outputs(args)
         logging.info("All of the child processes over!")
+
 
 
 
