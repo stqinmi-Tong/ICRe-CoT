@@ -1,5 +1,0 @@
-{
-    "chat": {
-    "init_query": "You are an NLP researcher specializing in knowledge graphs. Given an entity: {entity}, and its associated knowledge graph triples text:\"{triple_str}\", your task is to focus on the relationship between this word or phrase and other words or phrases,simulate retrieving a description of the entity from Wikipedia or similar reliable knowledge sources using your internal knowledge base. Then summarize this into a concise paragraph. Please focus on the relationship between this word or phrase and other words or phrases to output your answer. Make the outputs fluent, informative, and no longer than 6 sentences. These descriptions will be used in a system that builds textual representations of entities in a knowledge graph.\n Please output your response in the following format exactly: **search text**: <Your summarized version of what you \"found\" in your internal Wikipedia-like knowledge>."
-    }
-}
