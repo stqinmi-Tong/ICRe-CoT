@@ -28,13 +28,13 @@ class Demon_sampler:
                     ent, text = line.strip().split("\t")
                     self.ent2text[ent] = text
     def load_demonstration(self):
-        with open("./dataset/" + self.dataset + "/demonstration/"+ "T_link_base_"+ self.args.query +".txt", "r") as f:
+        with open("./dataset/" + self.dataset + "/supplement/"+ "T_link_base_"+ self.args.query +".txt", "r") as f:
             self.link_base = json.load(f)  ###t+/t+r:[[h1,r,t],[h2,r,t],...] or h+/t+r:[[h,r,t1],[h,r,t2],...]
 
-        with open("./dataset/" + self.dataset + "/demonstration/"+ self.args.query +"_supplement.txt", "r") as f:
+        with open("./dataset/" + self.dataset + "/supplement/"+ self.args.query +"_supplement.txt", "r") as f:
             supplement_pool = json.load(f)
 
-        with open("./dataset/" + self.dataset + "/demonstration/"+ self.args.query +"_analogy.txt", "r") as f:
+        with open("./dataset/" + self.dataset + "/supplement/"+ self.args.query +"_analogy.txt", "r") as f:
             analogy_pool = json.load(f)
 
         keys = self.ent2text.keys()
