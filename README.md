@@ -4,7 +4,26 @@ The repository of paper: "ICRE-COT: A RETRIEVAL-REVISED TWO-STAGE RANKING FRAMEW
 
 ![](./ICRe-CoT.jpeg)
 
-#### Section 1. Prepare the Datasets
+#### Section 1. Installation
+The starting point is to create a python 3.9 environment and install dependencies:
+```
+conda create -n ICRE-COT python=3.9
+```
+Then, set environment variables and activate your environment:
+```
+conda activate ICRE-COT
+```
+Install dependencies:
+```
+pip install -r requirements.txt
+```
+Download necessary dependencies:
+
+Prepare **msmarco-distilbert-base-v4** in your directory from: https://huggingface.co/sentence-transformers/msmarco-distilbert-base-v4
+
+Prepare **punkt** in your directory from: https://www.nltk.org/nltk_data/
+
+#### Section 2. Prepare the Datasets
 
 Before executing the code, please download the supplement data for fb1k-237 and wn18rr datasets first and organize them into the datasets/fb1k-237 and datasets/wn18rr directory according to the repository structure:
 
@@ -14,7 +33,7 @@ We use text self-alignment files for relations for both datasets from KICGPT and
 
 We use Rotate to produce the initial candidate list, you can also repace it as  other KGC models if you want. You only need to name your candidate list file as *test_answer.txt* and put this file into the datasets/fb1k-237 and datasets/wn18rr directory respectively.
 
-#### Section 2. Heterogeneous Context Construction
+#### Section 3. Heterogeneous Context Construction
 
 Running commands to generate context files
 
@@ -25,7 +44,7 @@ python entity_description_query.py --dataset wn18rr
 
 The produced context files are under datasets/fb15k-237/description/ and datasets/wn18rr/description/.
 
-#### Section 3. Retrieval-Revised Two-stage Ranking for Link Prediction
+#### Section 4. Retrieval-Revised Two-stage Ranking for Link Prediction
 
 ##### Link Prediction by directly performing two-stage candidate re-ranking
 
